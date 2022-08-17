@@ -1,8 +1,9 @@
-package com.lucasbrunkhorst;
+package com.lucasbrunkhorst.testes;
 
 import com.lucasbrunkhorst.pedido.GerarPedidos;
 import com.lucasbrunkhorst.pedido.GerarPedidosHandler;
 import com.lucasbrunkhorst.pedido.acao.EnviarEmailPedido;
+import com.lucasbrunkhorst.pedido.acao.LogDePedido;
 import com.lucasbrunkhorst.pedido.acao.SalvarPedidoNoBancoDeDados;
 
 import java.math.BigDecimal;
@@ -15,7 +16,10 @@ public class TestaPedido {
         int quantidadeItens = Integer.parseInt("3");
 
         GerarPedidos gerador = new GerarPedidos(cliente, valorOrcamento, quantidadeItens);
-        GerarPedidosHandler handler = new GerarPedidosHandler(Arrays.asList(new SalvarPedidoNoBancoDeDados(), new EnviarEmailPedido()));
+        GerarPedidosHandler handler = new GerarPedidosHandler(Arrays.asList(
+                new SalvarPedidoNoBancoDeDados(),
+                new EnviarEmailPedido(),
+                new LogDePedido()));
         handler.executa(gerador);
 
     }

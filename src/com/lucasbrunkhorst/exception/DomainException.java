@@ -1,4 +1,4 @@
-package com.lucasbrunkhorst;
+package com.lucasbrunkhorst.exception;
 
 public class DomainException extends RuntimeException {
     public DomainException(String mensagem) {

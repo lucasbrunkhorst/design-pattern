@@ -1,9 +1,6 @@
 package com.lucasbrunkhorst.orcamento;
 
-import com.lucasbrunkhorst.DomainException;
 import com.lucasbrunkhorst.http.HttpAdapter;
-
-import java.util.Map;
 
 public class RegistroDeOrcamento {
 
@@ -14,15 +11,15 @@ public class RegistroDeOrcamento {
     }
 
     public void registrar(Orcamento orcamento) {
-        if(!orcamento.isFinalizado()) {
+    /*    if(!orcamento.isFinalizado()) {
             throw new DomainException("Orcamento nao finalizado!");
         }
-        String url = "https://api.externa.com";
+        String url = "";
         Map<String, Object> dados = Map.of(
                 "valor", orcamento.getValor(),
                 "quantidade", orcamento.getQuantidadeItens()
             );
-        http.post(url, dados);
+        http.post(url, dados);*/
 
     }
 }

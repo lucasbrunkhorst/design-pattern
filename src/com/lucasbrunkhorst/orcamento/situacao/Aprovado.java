@@ -1,6 +1,5 @@
 package com.lucasbrunkhorst.orcamento.situacao;
 
-import com.lucasbrunkhorst.DomainException;
 import com.lucasbrunkhorst.orcamento.Orcamento;
 
 import java.math.BigDecimal;
